@@ -4,8 +4,8 @@ import "./index.css";
 import {
   Droplets,
   DollarSign,
-  Drill,
-  Ship
+  Ship,
+  Cog
 } from "lucide-react";
 
 const PRODUCTION_URL =
@@ -147,7 +147,7 @@ export default function App() {
 
     loadData();
 
-    const dataInterval = setInterval(loadData, 60000);
+    const dataInterval = setInterval(loadData, 180000);
 
     const clockInterval = setInterval(() => {
       setCurrentTime(new Date());
@@ -245,19 +245,11 @@ export default function App() {
             <strong>{formatNumber(accumulatedProduction.value)}</strong>
           </div>
         </section>
-
-        <section className="card">
-		 		  
+		
+		<section className="card">
 		  <h2 className="section-title">
-
-			<img
-			 src="/psc-dashboard/icons/drilling.png"
-			 alt="Drilling"
-			 className="title-icon drilling-icon"
-			/>
-
+			<Cog size={26} strokeWidth={2.4} />
 			Wells Status
-
 		  </h2>
 
           <div className="well-box">
